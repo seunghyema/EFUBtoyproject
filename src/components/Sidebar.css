@@ -1,0 +1,154 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-logo {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--text);
+}
+
+.sidebar-logo:hover,
+.nav-link:hover,
+.sidebar-user:hover {
+  background: var(--hover);
+}
+
+.sidebar-nav {
+  width: 100%;
+  margin: 8px 0 18px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.nav-link {
+  width: fit-content;
+  min-height: 50px;
+  padding: 12px 18px 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 20px;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+.sidebar-post-btn {
+  width: 225px;
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.sidebar-post-btn:hover {
+  background: #1a8cd8;
+}
+
+.sidebar-user {
+  width: 100%;
+  margin-top: auto;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+}
+
+.sidebar-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-user div {
+  display: grid;
+  min-width: 0;
+}
+
+.sidebar-user strong {
+  font-size: 15px;
+}
+
+.sidebar-user span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+@media (max-width: 1080px) {
+  .sidebar {
+    align-items: center;
+  }
+
+  .nav-link {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .nav-link span,
+  .sidebar-user div {
+    display: none;
+  }
+
+  .sidebar-post-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 0;
+  }
+
+  .sidebar-post-btn::before {
+    content: "+";
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    height: 64px;
+    padding: 0;
+    display: block;
+    border-top: 1px solid var(--border);
+    background: rgba(0, 0, 0, 0.92);
+  }
+
+  .sidebar-logo,
+  .sidebar-post-btn,
+  .sidebar-user {
+    display: none;
+  }
+
+  .sidebar-nav {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
