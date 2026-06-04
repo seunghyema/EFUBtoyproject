@@ -1,0 +1,96 @@
+.tweet-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.tweet-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tweet-avatar {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tweet-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.tweet-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tweet-author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.tweet-author strong {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.tweet-author span {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.tweet-more {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.tweet-more:hover {
+  color: var(--blue);
+  background: rgba(29, 155, 240, 0.12);
+}
+
+.tweet-content {
+  margin: 2px 0 12px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tweet-actions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 460px;
+  color: var(--muted);
+}
+
+.tweet-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  padding: 0;
+}
+
+.tweet-actions button:hover {
+  color: var(--blue);
+}
